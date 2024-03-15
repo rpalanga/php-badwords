@@ -23,7 +23,8 @@
 
                 <form action="result.php" method="GET" class="d-flex flex-column align-items-baseline  gap-3">
                     <div>
-                        <label for="" class="fw-bold fs-3 ">Una breve storia:</label>
+                        <label for="" class="fw-bold fs-3 ">Una storia breve:</label>
+                        <input type="text" name="cens-word" id="" placeholder="inserisci una parola da censurare" class=" rounded-3 shadow w-100">
                     </div>
                     
                     <textarea type="text-area" name="user-name" placeholder="Siamo curiosi di leggerla" id="" class="rounded-3 shadow "  style="height: 300px; width: 500px;" ></textarea>

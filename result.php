@@ -1,6 +1,6 @@
 <?php
 $user_name= $_GET['user-name'];
-
+$cens_word=$_GET['cens-word']
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -34,9 +34,18 @@ $user_name= $_GET['user-name'];
                     
                     <textarea type="text-area" name="user-name" placeholder="Siamo curiosi di leggerla" id="" class="rounded-3 shadow "  style="height: 300px; width: 500px;" >
                     <?php
-                    echo $user_name
+                    echo $user_name;
+                    // $user_nameSeparato = explode(" ", $user_name);
+                    // var_dump($user_nameSeparato);
                     ?>
                     </textarea>
+                    <button class="btn btn-secondary">
+                        <?php
+                        $userResult = strlen($user_name);
+                        
+                        echo "La lunghezza del testo è <strong>$userResult</strong>"       
+                        ?>
+                    </button>
                     
                 </form>
 
@@ -54,9 +63,25 @@ $user_name= $_GET['user-name'];
                     
                     <textarea type="text-area" name="user-name" placeholder="Siamo curiosi di leggerla" id="" class="rounded-3 shadow "  style="height: 300px; width: 500px;" >
                     <?php
-                    echo $user_name
+                    
+                    
+                    $censWords= str_replace($cens_word,'***',$user_name);
+                    echo $censWords;
+
                     ?>
                     </textarea>
+                    <button class="btn btn-secondary">
+                        <?php
+                        echo "Le parole che non puoi utilizzare sono <strong>$cens_word</strong> <br>";
+                        
+                        
+                        $censResult = strlen($censWords);
+                        
+                        echo "Le lunghezza della Frase censurata è <strong>$censResult</strong>";       
+                        
+                        ?>
+
+                    </button>
                     
                 </form>
 
